@@ -15,11 +15,11 @@ function s(e, all = false) {
 }
 function pl(page) {
     if (cached.hasOwnProperty(page)) {
-        s('#container').innerHTML = marked(cached[page]);
+        s('#container').innerHTML = window.markdownit().render(cached[page]);
     } else {
         get('./' + page + '.md', {
             success: function (m) {
-                s('#container').innerHTML = marked(m);
+                s('#container').innerHTML = window.markdownit().render(m);
                 cached[page] = m;
             }, failed: function (m) {
                 s('#container').innerHTML = 'Page load failed';
@@ -30,7 +30,7 @@ function pl(page) {
 function ca(nav) {
     var es = s('nav > a', true);
     for (var i in es) {
-        if(!(es[i] instanceof Element)) break;
+        if (!(es[i] instanceof Element)) break;
         if (es[i].id == nav) {
             es[i].classList.add('active');
         } else {
