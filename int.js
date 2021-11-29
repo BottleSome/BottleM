@@ -15,11 +15,11 @@ function s(e, all = false) {
 }
 function pl(page) {
     if (cached.hasOwnProperty(page)) {
-        s('#container').innerHTML = window.markdownit().render(cached[page]);
+        s('#container').innerHTML = window.markdownit({ html: true, linkify: true }).render(cached[page]);
     } else {
         get('./' + page + '.md', {
             success: function (m) {
-                s('#container').innerHTML = window.markdownit().render(m);
+                s('#container').innerHTML = window.markdownit({ html: true, linkify: true }).render(m);
                 cached[page] = m;
             }, failed: function (m) {
                 s('#container').innerHTML = 'Page load failed';
