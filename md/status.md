@@ -7,7 +7,7 @@
 <div class="trans" id="serverStatus"></div>
 
 <script>
-    const TOKEN = 'fddd65b630$%6626er5bb4e#60a0fc93$622e95';
+    const SERVER_ADDR='sq.awa.im:3975';
     const PIC = document.getElementById('loadingPic');
     const SERVER_STATUS = document.getElementById('serverStatus');
     let timeLeft = 0;
@@ -24,35 +24,17 @@
     }
     SERVER_STATUS.style.display = 'none';
     SERVER_STATUS.style.opacity = 0;
-    fetch('https://one.imbottle.com/bottlem/backend/query/mc', {
-        headers: {
-            'Authorization': `Bearer ${TOKEN}`
-        }
-    }).then(res => {
+    fetch(`https://api.mcsrvstat.us/2/${SERVER_ADDR}`).then(res => {
         if (res.status === 200)
             return res.json();
         // 获取失败
         return Promise.reject(res);
     }).then(resp => {
-        let respData = resp.data,
-            dataItemNum = respData ? Object.entries(respData).length : 0;
-        if (dataItemNum > 0) {
+        if(resp.online){
             renderHTML = `
                 <p>服务器已启动~</p>
-                <p>有 ${respData.players_online}/${respData.players_max} 位小伙伴正在用餐</p>
-                <p>餐馆地址: ${respData.ip}</p>
+                <p>有 ${resp.players.online}/${resp.players.max} 位小伙伴正在用餐</p>
             `;
-            if (respData.players_online === 0) {
-                timeLeft = respData.idling_time_left;
-                renderHTML += `<p>餐馆还有<span id="timeLeft">${timeLeft}</span>秒关闭</p>`;
-                let timer = setInterval(() => {
-                    let timeLeftElem = document.getElementById('timeLeft');
-                    if (!timeLeftElem || timeLeft <= 0)
-                        clearInterval(timer);
-                    else
-                        timeLeftElem.innerText = timeLeft--;
-                }, 1000);
-            }
         }
     }).catch(err => {
         console.log(err);

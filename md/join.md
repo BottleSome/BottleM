@@ -1,6 +1,6 @@
 ### 加入  
 
-![无奈](https://ae02.alicdn.com/kf/H8f2716f87a6a47dcba2ea20e6cb62f57M.jpg)  
+<img src='https://ae02.alicdn.com/kf/H8f2716f87a6a47dcba2ea20e6cb62f57M.jpg' style='width:400px' referrerpolicy="no-referrer"></img>  
 
 先陈述一个事实：因为大多数小伙伴都比较忙，服务器经常是**零人**状态，这也是为什么我们采用了新的运营方式。咱这个小破服虽然掀不起什么大风大浪，但可以是**一个宁静的放松之处**~~（高情商）~~  
 

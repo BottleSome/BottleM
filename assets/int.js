@@ -41,7 +41,7 @@ function checkActive(nav) {
     }
 }
 rou.x('container').a('def', '!index', function (a, b, pn) {
-    sel('#container').innerHTML = '<img src=\'https://one.imbottle.com/mcimg/\'></img>';
+    sel('#container').innerHTML = '<img src=\'https://one.imbottle.com/mcimg/\' referrerpolicy="no-referrer"></img>';
     checkActive(a);
     console.log(a);
 }).a('reg', 'intro', function (a, b, pn) {

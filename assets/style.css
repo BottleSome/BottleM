@@ -36,7 +36,7 @@ nav>.active {
 
 #container ul {
     margin-top: 5px;
-    padding-left: 20px;
+    padding-left: 2.5em;
 }
 
 footer>p {
@@ -59,4 +59,12 @@ hr {
     margin: 1.2em 0;
     background-color: #d0d7de;
     border: 0;
+}
+
+blockquote{
+    background-color: #ebebeb;
+    font-size:.7em;
+    color:rgb(86, 86, 86);
+    padding:.3em 1em;
+    border-radius:.6em;
 }
