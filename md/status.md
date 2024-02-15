@@ -7,7 +7,7 @@
 <div class="trans" id="serverStatus"></div>
 
 <script>
-    const SERVER_ADDR='sq.awa.im:3975';
+    const SERVER_ADDR='im.rainplay.cn:28503';
     const PIC = document.getElementById('loadingPic');
     const SERVER_STATUS = document.getElementById('serverStatus');
     let timeLeft = 0;
