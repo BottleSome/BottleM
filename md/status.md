@@ -7,7 +7,7 @@
 <div class="trans" id="serverStatus"></div>
 
 <script>
-    const SERVER_ADDR='im.rainplay.cn:28503';
+    const SERVER_ADDR='bottlem.top';
     const PIC = document.getElementById('loadingPic');
     const SERVER_STATUS = document.getElementById('serverStatus');
     let timeLeft = 0;
@@ -24,7 +24,7 @@
     }
     SERVER_STATUS.style.display = 'none';
     SERVER_STATUS.style.opacity = 0;
-    fetch(`https://api.mcsrvstat.us/2/${SERVER_ADDR}`).then(res => {
+    fetch(`https://api.mcstatus.io/v2/status/java/${SERVER_ADDR}`).then(res => {
         if (res.status === 200)
             return res.json();
         // 获取失败
