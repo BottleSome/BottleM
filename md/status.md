@@ -1,9 +1,9 @@
 <style>
     .trans {
-        transition: 1s ease;
+        transition: .5s ease;
     }
 </style>
-<img class="trans" src="./pics/letMeCheck.png" id="loadingPic"></img>
+<img class="trans" src="./pics/letMeCheckGif.gif" id="loadingPic"></img>
 <div class="trans" id="serverStatus"></div>
 
 <script>
