@@ -41,7 +41,8 @@ function checkActive(nav) {
     }
 }
 rou.x('container').a('def', '!index', function (a, b, pn) {
-    sel('#container').innerHTML = '<img src=\'https://one.imbottle.com/mcimg/\' referrerpolicy="no-referrer"></img>';
+    // 每次都生成随机数，防止缓存
+    sel('#container').innerHTML = `<img src="https://one.imbottle.com/mcimg/?${Math.floor(Math.random() * 100000)}" referrerpolicy="no-referrer"></img>`;
     checkActive(a);
     console.log(a);
 }).a('reg', 'intro', function (a, b, pn) {

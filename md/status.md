@@ -7,7 +7,7 @@
 <div class="trans" id="serverStatus"></div>
 
 <script>
-    const SERVER_ADDR='int.bottlem.top';
+    const SERVER_ADDR='bottlem.top';
     const PIC = document.getElementById('loadingPic');
     const SERVER_STATUS = document.getElementById('serverStatus');
     let timeLeft = 0;

@@ -4,7 +4,7 @@
 
 准备好了吗？接着往下看吧。    
 
-<img src='https://ae02.alicdn.com/kf/Hcb727e6567b74672a3a709bcc6796fe1V.jpg' style='width:400px' referrerpolicy="no-referrer"></img>  
+<img src='./pics/potatoServer.jpg' style='width:400px' referrerpolicy="no-referrer"></img>  
 
 本服为**国际正版公益服**，且有白名单，**长期运营**。  
 
