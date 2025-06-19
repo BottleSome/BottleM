@@ -7,7 +7,6 @@
 <div class="trans" id="serverStatus"></div>
 
 <script>
-    const SERVER_ADDR='bottlem.top';
     const PIC = document.getElementById('loadingPic');
     const SERVER_STATUS = document.getElementById('serverStatus');
     let timeLeft = 0;
@@ -24,13 +23,13 @@
     }
     SERVER_STATUS.style.display = 'none';
     SERVER_STATUS.style.opacity = 0;
-    fetch(`https://api.mcstatus.io/v2/status/java/${SERVER_ADDR}`).then(res => {
+    fetch(`https://serv.xbottle.top/mc/mcstatus`).then(res => {
         if (res.status === 200)
             return res.json();
         // 获取失败
         return Promise.reject(res);
     }).then(resp => {
-        if(resp.online){
+        if(resp.ok){
             renderHTML = `
                 <p>服务器已启动~</p>
                 <p>有 ${resp.players.online}/${resp.players.max} 位小伙伴正在用餐</p>
